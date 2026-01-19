@@ -35,7 +35,7 @@
   },
   {
     "name": "ATRI",
-    "path": "https://proxy.pipers.cn/https://raw.githubusercontent.com/lvluoyue/Live2D-ATRI/refs/heads/main/atri_8.model3.json",
+    "path": "https://proxy.pipers.cn/https://raw.githubusercontent.com/luoyue712/Live2D/refs/heads/main/atri/atri_8.model3.json",
     "volume": 1,
     "scale": 0.23,
     "position": [-90, 100],

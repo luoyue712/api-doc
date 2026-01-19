@@ -5,17 +5,13 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "lib": ["ES2020", "DOM","DOM.Iterable"],
-    "types": [
-      "vite/client",
-      "vitepress",
-      "vite-plugin-pwa/client"
-    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
   "include": [
     "**/*.ts",

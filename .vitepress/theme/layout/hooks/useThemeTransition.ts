@@ -1,5 +1,5 @@
 import { useData } from 'vitepress'
-import { nextTick, provide } from 'vue'
+import { provide } from 'vue'
 
 /**
  * 主题切换动画
@@ -24,11 +24,8 @@ const useThemeTransition = () => {
       )}px at ${x}px ${y}px)`
     ]
 
-    await document.startViewTransition(async () => {
-      isDark.value = !isDark.value
-      await nextTick()
-    }).ready
-
+    await document.startViewTransition().ready
+    isDark.value = !isDark.value
     document.documentElement.animate(
       { clipPath: isDark.value ? clipPath.reverse() : clipPath },
       {

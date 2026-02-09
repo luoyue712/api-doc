@@ -193,7 +193,6 @@ const vitePressConfig = (env): UserConfig => {
         description: description, // 应用的描述
         theme_color: "#ffffff", // 主题颜色
         lang: "zh-CN",
-        version: "1.0.1",
         icons: [
           {
             src: "./images/pwa-192x192.png", // 图标路径
@@ -337,7 +336,7 @@ const vitePressI18nConfig = () => {
   };
 }
 
-export default defineConfig(({mode}: ConfigEnv): UserConfig => {
+export default defineConfig(async ({mode}: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd());
-  return withPwa(withSidebar(withI18n(vitePressConfig(env), vitePressI18nConfig(env)), vitePressSidebarConfig(env)))
+  return await withPwa(withSidebar(withI18n(vitePressConfig(env), vitePressI18nConfig(env)), vitePressSidebarConfig(env)))
 })

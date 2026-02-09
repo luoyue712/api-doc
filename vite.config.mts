@@ -10,9 +10,10 @@ import {
 } from '@nolebase/vitepress-plugin-page-properties/vite';
 import {ConfigEnv, loadEnv} from "vitepress";
 import VueDevTools from 'vite-plugin-vue-devtools'
+import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 
 export default defineConfig(({mode}: ConfigEnv) => {
-  const env = loadEnv(mode, process.cwd());
+  loadEnv(mode, process.cwd());
   return {
     optimizeDeps: {
       exclude: [
@@ -37,7 +38,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
       }),
       GitChangelog({
         // 填写在此处填写您的仓库链接
-        repoURL: 'https://github.com/lvluoyue/api-doc',
+        repoURL: 'https://github.com/luoyue712/api-doc',
       }),
       GitChangelogMarkdownSection({
         exclude: (id) => id.endsWith('index.md'),
@@ -52,6 +53,40 @@ export default defineConfig(({mode}: ConfigEnv) => {
       PagePropertiesMarkdownSection({
         excludes: [
           'index.md',
+        ],
+      }),
+      AnnouncementPlugin({
+        title: '公告',
+        body: [
+          { type: 'text', content: '0元服务器首选啪啪云计算' },
+          // {
+          //   type: 'image',
+          //   src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033',
+          //   style: 'display: inline-block;width:46%;padding-right:6px'
+          // },
+          // {
+          //   type: 'image',
+          //   src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea',
+          //   style: 'display: inline-block;width:46%;padding-left:6px'
+          // }
+        ],
+        footer: [
+          {
+            type: 'button',
+            content: '点击进入',
+            link: 'https://www.ppyjs.cn',
+            props: {
+              type: 'primary'
+            }
+          },
+          // {
+          //   type: 'button',
+          //   content: '主题',
+          //   link: 'https://link',
+          //   props: {
+          //     type: 'success'
+          //   }
+          // },
         ],
       })
     ],

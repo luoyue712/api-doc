@@ -35,7 +35,7 @@ export default {
     const route = useRoute();
     // giscus配置
     giscusTalk({
-        repo: 'lvluoyue/api-doc', //仓库
+        repo: 'luoyue712/api-doc', //仓库
         repoId: 'R_kgDONdDcpg', //仓库ID
         category: 'Announcements', // 讨论分类
         categoryId: 'DIC_kwDONdDcps4CnEHS', //讨论分类ID

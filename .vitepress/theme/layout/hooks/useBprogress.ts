@@ -1,6 +1,6 @@
 import {BProgress} from "@bprogress/core";
 import {useRouter} from "vitepress";
-import '@bprogress/core/css'
+import "@bprogress/core/css"
 
 export default () => {
 

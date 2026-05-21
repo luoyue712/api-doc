@@ -15,12 +15,6 @@ import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 export default defineConfig(({mode}: ConfigEnv) => {
   loadEnv(mode, process.cwd());
   return {
-    optimizeDeps: {
-      exclude: [
-        '@nolebase/*',
-        'vitepress',
-      ],
-    },
     ssr: {
       noExternal: [
         '@nolebase/*',
@@ -97,7 +91,7 @@ export default defineConfig(({mode}: ConfigEnv) => {
     publicDir: "../public", // 指定 public 目录路径
     build: {
       chunkSizeWarningLimit: 1000, // 设置为 1 MB
-      rollupOptions: {
+      rolldownOptions: {
         external: ['oh-my-live2d'],
       }
     }

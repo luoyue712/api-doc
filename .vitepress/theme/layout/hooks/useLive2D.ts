@@ -1,9 +1,8 @@
 import {onMounted} from "vue"
 import type {Models} from "oh-my-live2d/dist/modules/models";
-import type {Oml2dEvents, Oml2dMethods, Oml2dProperties} from "oh-my-live2d";
+import type {Oml2dEvents, Oml2dMethods, Oml2dProperties, ModelOptions} from "oh-my-live2d";
 import axios from "axios";
 import modelsData from './live2d-models.json';
-import {ModelOptions} from "oh-my-live2d/dist/types/options/model";
 
 type Oml2d = Oml2dProperties & Oml2dMethods & Oml2dEvents & {
   models: InstanceType<typeof Models>;

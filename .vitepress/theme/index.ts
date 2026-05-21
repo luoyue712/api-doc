@@ -4,9 +4,7 @@ import {type Theme, useData, useRoute} from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Layout from './layout/index.vue'
 
-// @ts-ignore
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
-// @ts-ignore
 import {NolebaseGitChangelogPlugin} from '@nolebase/vitepress-plugin-git-changelog/client'
 import {
   InjectionKey,
@@ -56,7 +54,7 @@ export default {
   enhanceApp({app}) {
     app.use(TwoslashFloatingVue)
       .use(NolebaseGitChangelogPlugin)
-      .use(NolebasePagePropertiesPlugin(), {
+      .use(NolebasePagePropertiesPlugin<DynamicProperty<string>>(), {
         properties: {
           'zh-CN': [
             {
@@ -88,7 +86,7 @@ export default {
             },
           ],
         },
-      } as Options<DynamicProperty>)
+      } as Options<DynamicProperty<string>>)
       .provide(InjectionKey, {
         layoutSwitch: {
           disableHelp: true,

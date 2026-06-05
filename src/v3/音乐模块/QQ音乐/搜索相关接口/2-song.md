@@ -42,6 +42,7 @@
             {
                 "songID": 105648974, //歌曲ID
                 "songMID": "0023CVP23SH17s", //歌曲mid
+                "mediaMid": "003yM7Uc3TRo5z",  //音频资源mid [!code ++]
                 "vid": "v00199a1i1e", //mv的vid
                 "title": "梦回还", //歌曲名
                 "subtitle": "《狐妖小红娘·王权篇》网络动画片头曲", //副标题
